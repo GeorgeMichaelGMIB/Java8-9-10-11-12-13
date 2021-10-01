@@ -15,7 +15,11 @@ public class Application {
             return "This is a call from lambda expression";
         };
         System.out.println(nameInterface.sayName());
-        
+        Runnable runnable = () -> {
+            System.out.println("This is the runnable thread using lambda");
+        };
+        runnable.run();
 	}
+
 
 }
